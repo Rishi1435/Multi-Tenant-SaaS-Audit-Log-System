@@ -11,7 +11,7 @@ echo "🚀 Bootstrapping multi-tenant Kafka environment..."
 
 # Function to run kafka commands in the container
 run_kafka_cmd() {
-    docker exec $KAFKA_CONTAINER "$@"
+    "$@"
 }
 
 # 1. Wait for Kafka to be fully ready (Hard readiness loop)
