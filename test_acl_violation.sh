@@ -7,7 +7,7 @@ docker exec -t app node -e "
 const { Kafka } = require('kafkajs');
 const kafka = new Kafka({
   clientId: 'violation-test',
-  brokers: ['kafka:29092'],
+  brokers: ['kafka:9092'],
   sasl: {
     mechanism: 'scram-sha-256',
     username: 'tenant-globex',
