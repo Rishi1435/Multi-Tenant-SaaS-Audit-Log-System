@@ -27,6 +27,12 @@ A production-grade, secure audit logging pipeline built with Apache Kafka, MinIO
     ./provision.sh
     ```
 
+## Demo
+
+Watch the project demo on YouTube:
+
+https://youtu.be/ANgaCeR1PFk
+
 ## Usage
 
 ### Sending Events
