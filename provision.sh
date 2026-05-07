@@ -2,7 +2,7 @@
 
 # Configuration
 KAFKA_CONTAINER="kafka"
-BOOTSTRAP_SERVER="localhost:29092"
+BOOTSTRAP_SERVER="kafka:29092"
 TENANTS=("tenant-acme" "tenant-globex" "tenant-initech")
 PASSWORDS=("acme-password" "globex-password" "initech-password")
 QUOTA=1048576 # 1 MB/s
@@ -11,7 +11,7 @@ echo "🚀 Bootstrapping multi-tenant Kafka environment..."
 
 # Function to run kafka commands in the container
 run_kafka_cmd() {
-    "$@"
+    docker-compose exec -T kafka "$@"
 }
 
 # 1. Wait for Kafka to be fully ready (Hard readiness loop)
